@@ -1,10 +1,14 @@
+$curDefauld: url("/src/img/cursor-default.svg"), default;
+$curActive: url("/src/img/cursor-active.svg"), default;
+
 body,
 * {
   font-family: "Montserrat";
+  cursor: $curDefauld;
 }
 
 .wraper {
-  background-color: #8DBDBA;
+  background-color: #8dbdba;
   transition: 2s;
   overflow: hidden;
 }
@@ -13,20 +17,11 @@ body,
   text-align: center;
   margin: 10px auto;
 }
-
-// .slider__container {
-//   overflow: hidden;
-// }
-// .slider__track {
-//   overflow: hidden;
-// }
-// .slider__item {
-//   overflow: hidden;
-// }
+.btn:hover {
+  cursor: $curActive;
+}
 
 .slider__track {
   display: flex;
   transition: 0.5s;
-
 }
-
