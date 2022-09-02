@@ -1,7 +1,7 @@
 
-@import 'style/normalize.css';
 @import 'style/var.scss';
-
-body {
-  background-color: $back;
-}
+@import 'style/style.scss';
+@import 'style/fonts.scss';
+@import 'style/frameBox.scss';
+@import 'style/normalize.css';
+@import 'style/bolls.scss';

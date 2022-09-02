@@ -17,12 +17,12 @@ module.exports = {
     open: true,
     hot: true,
   },
-  entry: ['@babel/polyfill', path.resolve(__dirname, "src", "index.js")],
+  entry: ["@babel/polyfill", path.resolve(__dirname, "src", "index.js")],
   output: {
     path: path.resolve(__dirname, "dist"),
     clean: true,
     filename: "[name].[contenthash].js",
-    assetModuleFilename: 'assets/[hash][ext]'
+    assetModuleFilename: "assets/[hash][ext]",
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -65,8 +65,15 @@ module.exports = {
         },
       },
       {
+        test: /\.woff2?$/i,
+        type: "asset/resource",
+        generator: {
+          filename: 'fonts/[name].[ext]'
+        },
+      },
+      {
         test: /\.(jpe?g|png|webp|gif|svg)$/i,
-        type: 'asset/resource',
+        type: "asset/resource",
       },
     ],
   },
